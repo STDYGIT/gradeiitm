@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grade Calculator</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
     <style>
         body {
             display: flex;
@@ -17,6 +19,7 @@
             font-family: 'Arial', sans-serif;
             color: #fff;
         }
+
         .container {
             text-align: center;
             background: rgba(255, 255, 255, 0.1);
@@ -30,10 +33,17 @@
             max-width: 1500px;
             min-height: 90%;
         }
+
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
+
         h1 {
             background: -webkit-linear-gradient(#ff7e5f, #feb47b);
             -webkit-background-clip: text;
@@ -41,12 +51,14 @@
             font-size: 2em;
             margin-bottom: 20px;
         }
+
         label {
             display: block;
             margin: 10px 0 5px;
             font-weight: bold;
             color: #fff;
         }
+
         input[type="number"] {
             width: calc(100% - 20px);
             padding: 10px;
@@ -59,10 +71,12 @@
             background-color: rgba(255, 255, 255, 0.2);
             color: #fff;
         }
+
         input[type="number"]:focus {
             border-color: #ff7e5f;
             background-color: rgba(255, 255, 255, 0.3);
         }
+
         button {
             background: linear-gradient(to right, #ff7e5f, #feb47b);
             border: none;
@@ -77,9 +91,11 @@
             border-radius: 5px;
             transition: background 0.3s ease;
         }
+
         button:hover {
             background: linear-gradient(to right, #feb47b, #ff7e5f);
         }
+
         .info-button {
             background: none;
             border: none;
@@ -89,6 +105,7 @@
             margin-left: 10px;
             color: #fff;
         }
+
         .info-popup {
             display: none;
             position: absolute;
@@ -104,18 +121,32 @@
             z-index: 1000;
             animation: fadeInOut 5s ease-in-out;
         }
+
         .info-popup img {
             width: 100%;
             border-radius: 5px;
         }
+
         @keyframes fadeInOut {
-            0% { opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { opacity: 0; }
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
         }
+
         .snowflake {
-            color: #00f;
+            color: rgb(124, 242, 120);
             font-size: 1em;
             position: absolute;
             top: -10px;
@@ -124,10 +155,17 @@
             pointer-events: none;
             animation: fall 10s linear infinite;
         }
+
         @keyframes fall {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(100vh); }
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(100vh);
+            }
         }
+
         .background-animation {
             position: absolute;
             top: 0;
@@ -140,11 +178,13 @@
         }
     </style>
 </head>
+
 <body>
     <div class="background-animation"></div>
     <div class="container" onclick="hideInfoPopup()">
         <h1>Overall Score Calculator</h1>
-        <h4>This is not an official calculator, but it provides a precise estimate for courses like CT English 1 and Maths 1.</h4>
+        <h4>This is not an official calculator, but it provides a precise estimate for courses like CT English 1 and
+            Maths 1.</h4>
         <form id="gradeForm">
             <label for="gaa">
                 GAA (Average score in Best 10 out of First 11 weekly graded assignments)
@@ -243,4 +283,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
